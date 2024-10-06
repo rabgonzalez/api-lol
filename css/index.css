@@ -1,0 +1,99 @@
+body{
+    margin: 0;
+    background-color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: black;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 1); /* Sombra para borde difuminado */
+}
+
+#boton {
+    display: block;
+    margin: auto;
+    margin-top: 220px;
+    background-color: #3a5d66;
+    color: white;
+    padding: 12px 22px;
+    font-size: 20px;
+    border: 3px inset #21d7b4;
+    border-radius: 10px 10px 70% 70%;
+}
+
+#boton:hover{
+    cursor:pointer;
+    background-color: #21d7b4;
+    border: 3px solid #21d7b4;
+    color: black;
+    box-shadow: 0 0 10px 1px #21d7b4;
+}
+
+.header > img{
+    height: 12rem;
+    width: 30rem;
+}
+
+#campeones{
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+img{
+    border-radius: 10px 10px 0 0;
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.card{
+    margin: auto;
+    text-align: center;
+    background-color: #3C3C41;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+    border: 1px solid #3C3C41;
+}
+
+.imagen{
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.card img:not(hover){
+    filter: grayscale(0.5) blur(2px);
+}
+
+.card img:hover{
+    transform: scale(1.1);
+    filter: grayscale(0) blur(0) saturate(170%)
+}
+
+.card:hover .tipo, .card:hover .nombre{
+    display: block;
+}
+
+.card:hover{
+    cursor: pointer;
+    transform: translateY(-8px);
+}
+
+.nombre{
+    display: none;
+    font-weight: bold;
+    background: linear-gradient(0deg, #785A28, #C89B3C);
+}
+
+.tipo{
+    display: none;
+    background: linear-gradient(0deg, #005A82, #0AC8B9);
+    border-radius: 0 0 10px 10px;
+}
