@@ -1,0 +1,29 @@
+{
+  "name": "api-lol",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build src/index.html --public-url /api-lol/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rabgonzalez/api-lol.git"
+  },
+  "author": "rabgonzalez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rabgonzalez/api-lol/issues"
+  },
+  "homepage": "https://github.com/rabgonzalez/api-lol#readme",
+  "dependencies": {
+    "parcel": "^2.12.0",
+    "svgo": "^3.0.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "srcset": "^5.0.1"
+  }
+}
